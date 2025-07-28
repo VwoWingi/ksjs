@@ -47,9 +47,12 @@ const LoadingSpinner = () => (
   </div>
 );
 
+
+
   function VWOProviderWrapper({children}: {children: React.ReactNode}) {
     const configOptions: IVWOOptions = {
       accountId: import.meta.env.VITE_VWO_ACCOUNT_ID,
+      pollInterval:2000,
       sdkKey: import.meta.env.VITE_VWO_SDK_KEY,
       logger: {
         level: import.meta.env.VITE_VWO_LOG_LEVEL,
